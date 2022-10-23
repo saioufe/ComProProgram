@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    >
+
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/main_toolbar"
@@ -66,7 +73,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/roboto_medium"
-        android:text="Top Places In IRAQ"
+        android:text="Compro Program"
         android:textColor="@color/title_color"
         android:textSize="22sp"
         android:textStyle="bold"
@@ -98,7 +105,7 @@
                 android:background="@android:color/transparent"
                 android:fontFamily="sans-serif-black"
                 android:letterSpacing="0.02"
-                android:text="@string/east_iraq"
+                android:text="@string/Compro"
                 android:textAllCaps="false"
                 android:textColor="@color/top_taps"
                 android:textSize="12dp" />
@@ -125,7 +132,7 @@
                 android:background="@android:color/transparent"
                 android:fontFamily="sans-serif-black"
                 android:letterSpacing="0.02"
-                android:text="@string/west_iraq"
+                android:text="@string/StudentLife"
                 android:textAllCaps="false"
                 android:textColor="@color/top_taps"
                 android:textSize="12dp" />
@@ -152,7 +159,7 @@
                 android:background="@android:color/transparent"
                 android:fontFamily="sans-serif-black"
                 android:letterSpacing="0.02"
-                android:text="@string/north_iraq"
+                android:text="@string/Finances"
                 android:textAllCaps="false"
                 android:textColor="@color/top_taps"
                 android:textSize="12dp" />
@@ -180,7 +187,7 @@
                 android:background="@android:color/transparent"
                 android:fontFamily="sans-serif-black"
                 android:letterSpacing="0.02"
-                android:text="@string/south_iraq"
+                android:text="@string/Practicums"
                 android:textAllCaps="false"
                 android:textColor="@color/top_taps"
                 android:textSize="12dp" />
@@ -235,7 +242,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_medium"
         android:textColor="@color/title_color"
-        android:text="Categories"
+        android:text="Compro Plan"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:textSize="20sp"
@@ -244,87 +251,15 @@
         app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
 
-    <LinearLayout
-        android:layout_width="410dp"
-        android:layout_height="118dp"
-        android:orientation="horizontal"
-        android:paddingHorizontal="15dp"
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/compro_point_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/category_text">
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:layout_weight="1"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="3dp">>
-
-            <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_gravity="center"
-                android:padding="15dp"
-                android:src="@drawable/ic_plane"
-                app:tint="@color/green_mody" />
-        </androidx.cardview.widget.CardView>
-
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:layout_weight="1"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="3dp">>
-
-            <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_gravity="center"
-                android:padding="20dp"
-                android:src="@drawable/ic_food"
-                app:tint="@color/green" />
-        </androidx.cardview.widget.CardView>
-
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:layout_weight="1"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="3dp">
-
-            <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_gravity="center"
-                android:padding="20dp"
-                android:src="@drawable/ic_pray"
-                app:tint="@color/yellow" />
-        </androidx.cardview.widget.CardView>
-
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:layout_weight="1"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="3dp">
-            >
-
-            <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_gravity="center"
-                android:padding="20dp"
-                android:src="@drawable/ic_resort"
-                app:tint="@color/red_light" />
-        </androidx.cardview.widget.CardView>
-    </LinearLayout>
+        app:layout_constraintTop_toBottomOf="@+id/category_text" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>

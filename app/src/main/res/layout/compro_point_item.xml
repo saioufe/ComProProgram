@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_rowWeight="1"
+    android:layout_columnWeight="1"
+    android:elevation="10dp"
+    android:outlineAmbientShadowColor="@color/card_shadow"
+    android:outlineSpotShadowColor="@color/card_shadow"
+    app:cardCornerRadius="20dp"
+    android:id="@+id/point_element"
+    android:layout_margin="10dp"
+
+    app:cardElevation="10dp">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="15dp"
+        >
+
+        <ImageView
+            android:id="@+id/point_image"
+            android:layout_width="100dp"
+            android:src="@drawable/app_image1"
+            android:layout_height="200dp"/>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            >
+
+            <TextView
+                android:id="@+id/point_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Founder, CEO &amp; Lead Designer"
+                android:textColor="#000000"
+                android:textSize="18sp"
+
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <TextView
+                android:id="@+id/point_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Successfully launched Falcon Heavy, the most powerful operationa
+rocket in the world by a factor of two, with the ability to lift into
+orbit nearlv 64 metric tons 141.000 b) - a mass greater than a
+13/ jetliner loaded with passengers, crew, luggage and ruel."
+                android:textColor="@color/inactive_menu_item"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                tools:ignore="TextContrastCheck" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

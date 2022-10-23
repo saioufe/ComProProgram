@@ -1,5 +1,6 @@
 package com.example.comproprogram
 
+import ComproPointsAdaptor
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.LinearLayout
 import android.os.Bundle
@@ -8,13 +9,18 @@ import androidx.viewpager2.widget.ViewPager2
 import androidx.core.content.ContextCompat
 import androidx.viewpager2.widget.ViewPager2.OnPageChangeCallback
 import android.content.Intent
+import android.graphics.Point
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.ListView
 import androidx.appcompat.widget.Toolbar
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.comproprogram.PressedActivity
 import com.example.comproprogram.adapters.PressedPageAdapter
 import com.example.comproprogram.adapters.SliderPageAdapter
+import com.example.comproprogram.data.ComProPoint
 import com.example.comproprogram.data.Slider
 import java.util.ArrayList
 import java.util.concurrent.atomic.AtomicReference
@@ -27,6 +33,23 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         sliderDotspanel = findViewById<View>(R.id.SliderDots) as LinearLayout
+
+        val points: MutableList<ComProPoint> = ArrayList()
+        points.add(ComProPoint("Study on Campus" , R.drawable.comrpo1, "Begin with 8-13 months of study on our U.S. campus. Learn leading edge technologies.  Study with expert faculty, top academics, and proven personal growth courses." ))
+        points.add(ComProPoint("Full-Time Paid Practicum" , R.drawable.compo2, "Internationals work for up to two years with a full-time paid practicum as a software developer in any company in the USA.  Average starting rate: \$80,000 – \$95,000 per year." ))
+        points.add(ComProPoint("Further Education" , R.drawable.compo3, "Finish your remaining courses via distance education during evenings and weekends while working at your practicum position. 98% full-time paid practicum placement success." ))
+        points.add(ComProPoint("Graduate with a Master’s Degree" , R.drawable.compo4, "Graduate and receive a Master’s Degree in Computer Science from your career-focused Master’s degree program. Congratulations!" ))
+
+
+        val pointRecycler = findViewById<View>(R.id.compro_point_recycler) as RecyclerView
+
+        // Create adapter passing in the sample user data
+        val adapter = ComproPointsAdaptor(points)
+        // Attach the adapter to the recyclerview to populate items
+        pointRecycler.adapter = adapter
+        // Set layout manager to position the items
+        pointRecycler.layoutManager = LinearLayoutManager(this)
+        pointRecycler.setNestedScrollingEnabled(false);
 
         // creating object of ViewPager
         val mViewPager: ViewPager2
