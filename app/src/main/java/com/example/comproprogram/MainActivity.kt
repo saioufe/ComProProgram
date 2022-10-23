@@ -5,8 +5,6 @@ import android.widget.LinearLayout
 import android.os.Bundle
 import com.example.comproprogram.R
 import androidx.viewpager2.widget.ViewPager2
-import com.example.screendesign2.adapters.SliderPageAdapter
-import com.example.screendesign2.adapters.PressedPageAdapter
 import androidx.core.content.ContextCompat
 import androidx.viewpager2.widget.ViewPager2.OnPageChangeCallback
 import android.content.Intent
@@ -15,6 +13,8 @@ import android.widget.Button
 import android.widget.ImageView
 import androidx.appcompat.widget.Toolbar
 import com.example.comproprogram.PressedActivity
+import com.example.comproprogram.adapters.PressedPageAdapter
+import com.example.comproprogram.adapters.SliderPageAdapter
 import com.example.comproprogram.data.Slider
 import java.util.ArrayList
 import java.util.concurrent.atomic.AtomicReference
