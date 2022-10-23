@@ -52,15 +52,7 @@
                 android:layout_weight="8" />
 
 
-            <ImageView
-                android:id="@+id/search_toolbar"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_gravity="end"
-                android:layout_weight="1"
-                android:padding="9dp"
-                android:src="@android:drawable/ic_search_category_default"
-                app:tint="@color/buttons_icons" />
+
 
         </LinearLayout>
 

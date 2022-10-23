@@ -23,10 +23,12 @@
         >
 
         <ImageView
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
             android:id="@+id/point_image"
             android:layout_width="100dp"
             android:src="@drawable/app_image1"
-            android:layout_height="200dp"/>
+            android:layout_height="150dp"/>
 
 
         <LinearLayout

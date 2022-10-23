@@ -57,25 +57,25 @@ class MainActivity : AppCompatActivity() {
 
         // sliders array
         val sliders: MutableList<Slider> = ArrayList()
-        sliders.add(Slider(R.drawable.app_image1, "Baghdad Tower", "Larges tower in baghdad"))
+        sliders.add(Slider(R.drawable.acre, "Beautiful 391 Acre Campus", "Fairfield, Iowa"))
         sliders.add(
             Slider(
-                R.drawable.app_image2,
-                "Central Bank of Baghdad",
-                "Illustration image for the bank"
+                R.drawable.tm,
+                "Develop Your Inner Genius",
+                "Our Secret Competitive Edge"
             )
         )
         sliders.add(
             Slider(
-                R.drawable.app_image3,
-                "Zoha Hadded Design",
-                "The first design for Zoha"
+                R.drawable.international,
+                "Over 4,000 Students",
+                "From 100 Countries"
             )
         )
         val imagesSliders: MutableList<Int> = ArrayList()
-        imagesSliders.add(R.drawable.app_image1)
-        imagesSliders.add(R.drawable.app_image2)
-        imagesSliders.add(R.drawable.app_image3)
+        imagesSliders.add(R.drawable.acre)
+        imagesSliders.add(R.drawable.tm)
+        imagesSliders.add(R.drawable.international)
 
 
         // Creating Object of ViewPagerAdapter
