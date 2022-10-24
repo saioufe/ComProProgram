@@ -1,27 +1,12 @@
 package com.example.comproprogram
 
-import ComproPointsAdaptor
-import androidx.appcompat.app.AppCompatActivity
-import android.widget.LinearLayout
-import android.os.Bundle
-import com.example.comproprogram.R
-import androidx.viewpager2.widget.ViewPager2
-import androidx.core.content.ContextCompat
-import androidx.viewpager2.widget.ViewPager2.OnPageChangeCallback
 import android.content.Intent
-import android.graphics.Point
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
-import android.widget.ListView
 import androidx.appcompat.widget.Toolbar
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.comproprogram.PressedActivity
-import com.example.comproprogram.adapters.PressedPageAdapter
-import com.example.comproprogram.adapters.SliderPageAdapter
-import com.example.comproprogram.data.ComProPoint
-import com.example.comproprogram.data.Slider
 import com.example.comproprogram.fragments.ComproFragment
 
 import java.util.ArrayList
@@ -104,6 +89,11 @@ class MainActivity : AppCompatActivity() {
                 shapes[i].visibility = View.INVISIBLE
             }
         }
+    }
+
+    fun topButtonPressed(view: View) {
+        var intent = Intent(this , TopActivity::class.java)
+        startActivity(intent)
     }
 
 

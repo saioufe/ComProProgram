@@ -4,8 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.os.Bundle
-import com.example.comproprogram.R
-import android.content.Intent
 import android.os.Build
 import android.view.View
 import android.view.WindowManager
@@ -16,7 +14,7 @@ import androidx.core.content.ContextCompat
 import androidx.viewpager2.widget.ViewPager2.OnPageChangeCallback
 import java.util.ArrayList
 
-class PressedActivity : AppCompatActivity() {
+class TopActivity : AppCompatActivity() {
     var sliderPressedDotspanel: LinearLayout? = null
     private var dotscount = 0
     private lateinit var dots: Array<ImageView?>
@@ -24,11 +22,11 @@ class PressedActivity : AppCompatActivity() {
     var messageFromIntent: String? = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_pressed)
+        setContentView(R.layout.activity_top)
         mainText = findViewById(R.id.second_page_titles)
-        val intent = intent
-        messageFromIntent = intent.getStringExtra("Title")
-        mainText.setText("Discover $messageFromIntent")
+//        val intent = intent
+//        messageFromIntent = intent.getStringExtra("Title")
+        mainText.setText(R.string.top_title)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             window.setFlags(
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
@@ -38,15 +36,15 @@ class PressedActivity : AppCompatActivity() {
         sliderPressedDotspanel = findViewById<View>(R.id.SliderDotsSecond) as LinearLayout
         val pressedViewPager: ViewPager2
         val imagesSliders: MutableList<Int> = ArrayList()
-        imagesSliders.add(R.drawable.app_image1)
-        imagesSliders.add(R.drawable.app_image2)
-        imagesSliders.add(R.drawable.app_image3)
+        imagesSliders.add(R.drawable.acre)
+        imagesSliders.add(R.drawable.tm)
+        imagesSliders.add(R.drawable.international)
 
 
         // Creating Object of ViewPagerAdapter
         val pressedPageAdapter: PressedPageAdapter
         pressedViewPager = findViewById<View>(R.id.back_slider) as ViewPager2
-        pressedPageAdapter = PressedPageAdapter(this@PressedActivity, imagesSliders)
+        pressedPageAdapter = PressedPageAdapter(this@TopActivity, imagesSliders)
         pressedViewPager.adapter = pressedPageAdapter
         dotscount = imagesSliders.size
         dots = arrayOfNulls(dotscount)
