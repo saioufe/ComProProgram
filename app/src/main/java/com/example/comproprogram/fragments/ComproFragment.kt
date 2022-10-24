@@ -24,7 +24,7 @@ import java.util.ArrayList
 class ComproFragment : Fragment() {
 
     var sliderDotspanel: LinearLayout? = null
-    private var dotscount = 0
+
     private lateinit var dots: Array<ImageView?>
     val points: MutableList<ComProPoint> = ArrayList()
     val sliders: MutableList<Slider> = ArrayList()
@@ -33,6 +33,7 @@ class ComproFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         points.add(ComProPoint("Study on Campus" , R.drawable.comrpo1, "Begin with 8-13 months of study on our U.S. campus. Learn leading edge technologies.  Study with expert faculty, top academics, and proven personal growth courses." ))
         points.add(ComProPoint("Full-Time Paid Practicum" , R.drawable.compo2, "Internationals work for up to two years with a full-time paid practicum as a software developer in any company in the USA.  Average starting rate: \$80,000 – \$95,000 per year." ))
         points.add(ComProPoint("Further Education" , R.drawable.compo3, "Finish your remaining courses via distance education during evenings and weekends while working at your practicum position. 98% full-time paid practicum placement success." ))
@@ -95,12 +96,9 @@ class ComproFragment : Fragment() {
         sliderPageAdapter = SliderPageAdapter(container!!.context, sliders)
 
         mViewPager.adapter = sliderPageAdapter
-        dotscount = sliders.size
-        dots = arrayOfNulls(dotscount)
+        dots = arrayOfNulls(3)
 
-        dotscount = sliders.size
-        dots = arrayOfNulls(dotscount)
-        for (i in 0 until dotscount) {
+        for (i in 0 until 3) {
             dots[i] = ImageView(container!!.context)
             dots[i]!!.setImageDrawable(
                 getContext()?.let {
@@ -128,7 +126,7 @@ class ComproFragment : Fragment() {
         mViewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
-                for (i in 0 until dotscount) {
+                for (i in 0 until 3) {
                     dots[i]!!
                         .setImageDrawable(
                             getContext()?.let {

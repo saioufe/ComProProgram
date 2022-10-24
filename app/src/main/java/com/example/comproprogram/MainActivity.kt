@@ -8,6 +8,7 @@ import android.widget.Button
 import android.widget.ImageView
 import androidx.appcompat.widget.Toolbar
 import com.example.comproprogram.fragments.ComproFragment
+import com.example.comproprogram.fragments.StudentLifeFragment
 
 import java.util.ArrayList
 import java.util.concurrent.atomic.AtomicReference
@@ -44,6 +45,8 @@ class MainActivity : AppCompatActivity() {
         shape1.visibility = View.VISIBLE
 
         var comproFragment:ComproFragment = ComproFragment()
+        var studentFragment:StudentLifeFragment = StudentLifeFragment(this)
+
         supportFragmentManager.beginTransaction()
             .add(R.id.mainContainer, comproFragment).commit()
 
@@ -52,7 +55,7 @@ class MainActivity : AppCompatActivity() {
             shape1.visibility = View.VISIBLE
             visiableShape.set(view)
             turnOfTheOthers(shapes, shape1)
-            var comproFragment:ComproFragment = ComproFragment()
+
             supportFragmentManager.beginTransaction()
                 .replace(R.id.mainContainer, comproFragment).commit()
         }
@@ -61,15 +64,15 @@ class MainActivity : AppCompatActivity() {
             visiableShape.set(view)
             turnOfTheOthers(shapes, shape2)
 
-            var comproFragment:ComproFragment = ComproFragment()
+
             supportFragmentManager.beginTransaction()
-                .replace(R.id.mainContainer, comproFragment).commit()
+                .replace(R.id.mainContainer, studentFragment).commit()
         }
         button3.setOnClickListener { view: View ->
             shape3.visibility = View.VISIBLE
             visiableShape.set(view)
             turnOfTheOthers(shapes, shape3)
-            var comproFragment:ComproFragment = ComproFragment()
+
             supportFragmentManager.beginTransaction()
                 .replace(R.id.mainContainer, comproFragment).commit()
         }
@@ -77,7 +80,7 @@ class MainActivity : AppCompatActivity() {
             shape4.visibility = View.VISIBLE
             visiableShape.set(view)
             turnOfTheOthers(shapes, shape4)
-            var comproFragment:ComproFragment = ComproFragment()
+
             supportFragmentManager.beginTransaction()
                 .replace(R.id.mainContainer, comproFragment).commit()
         }
