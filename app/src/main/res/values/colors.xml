@@ -20,9 +20,12 @@
     <color name="slider_indecator">#e3e6e5</color>
     <color name="trans_black">#20000000</color>
     <color name="inactive_menu_item">#C2C4C8</color>
+    <color name="finance_bg_item">#F8F8F8</color>
     <color name="primary">#2E2924</color>
     <color name="blue">#013676</color>
     <color name="card_shadow">#e6e8ed</color>
+    <color name="finance_image_color">#81083093</color>
+    <color name="finance_apply_btn_color">#FFA441</color>
     <color name="profilePrimaryDark">#FF3B30</color>
     <color name="profileAccentColor">#F7F7F7</color>
     <color name="whiteTextColor">#fff</color>

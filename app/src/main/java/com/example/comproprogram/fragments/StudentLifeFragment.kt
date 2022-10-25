@@ -1,16 +1,21 @@
 package com.example.comproprogram.fragments
 
+
+import android.net.Uri
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
+import android.widget.MediaController
+import android.widget.VideoView
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.comproprogram.MainActivity
 import com.example.comproprogram.R
 import com.example.comproprogram.adaptors.StudentLifeImagesAdaptor
-import java.util.ArrayList
+
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
@@ -18,6 +23,9 @@ class StudentLifeFragment(mainActivity: MainActivity) : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
     val images: MutableList<String> = ArrayList()
+    var videoUrl =
+        "https://firebasestorage.googleapis.com/v0/b/baghdad-apparel.appspot.com/o/videoplayback.mp4?alt=media&token=98dbbe86-b916-4897-986f-50ef68f7e94e"
+
     var context = mainActivity
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,6 +63,26 @@ class StudentLifeFragment(mainActivity: MainActivity) : Fragment() {
         studentImagesRecycler.adapter = adapter
         // Set layout manager to position the items
         studentImagesRecycler.layoutManager = GridLayoutManager(context , 2)
+
+
+
+        val videoView: VideoView = v.findViewById(R.id.videoView)
+
+
+        val uri: Uri = Uri.parse(videoUrl)
+
+
+        videoView.setVideoURI(uri)
+
+        val mediaController = MediaController(context)
+
+        mediaController.setAnchorView(videoView)
+        mediaController.setMediaPlayer(videoView)
+        videoView.setMediaController(mediaController)
+        videoView.setZOrderOnTop(true)
+
+
+        videoView.start()
         return v
     }
     companion object {

@@ -8,6 +8,7 @@ import android.widget.Button
 import android.widget.ImageView
 import androidx.appcompat.widget.Toolbar
 import com.example.comproprogram.fragments.ComproFragment
+import com.example.comproprogram.fragments.FinancesFragment
 import com.example.comproprogram.fragments.StudentLifeFragment
 
 import java.util.ArrayList
@@ -46,6 +47,7 @@ class MainActivity : AppCompatActivity() {
 
         var comproFragment:ComproFragment = ComproFragment()
         var studentFragment:StudentLifeFragment = StudentLifeFragment(this)
+        var financesFragment:FinancesFragment = FinancesFragment()
 
         supportFragmentManager.beginTransaction()
             .add(R.id.mainContainer, comproFragment).commit()
@@ -74,7 +76,7 @@ class MainActivity : AppCompatActivity() {
             turnOfTheOthers(shapes, shape3)
 
             supportFragmentManager.beginTransaction()
-                .replace(R.id.mainContainer, comproFragment).commit()
+                .replace(R.id.mainContainer, financesFragment).commit()
         }
         button4.setOnClickListener { view: View ->
             shape4.visibility = View.VISIBLE

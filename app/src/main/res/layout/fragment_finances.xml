@@ -1,14 +1,187 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragments.FinancesFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
 
-</FrameLayout>
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="413dp"
+        android:layout_height="249dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/myImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:background="@drawable/finance"
+            android:src="@drawable/finance_fade_color"
+            app:tint="@color/finance_image_color" />
+
+        <TextView
+            android:id="@+id/finances_title"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignTop="@+id/myImageView"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="20dp"
+
+            android:text="@string/finances_title"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/finances_points"
+            android:layout_width="wrap_content"
+            android:layout_height="110dp"
+            android:layout_alignTop="@+id/finances_title"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="50dp"
+            android:gravity="start"
+            android:paddingTop="20dp"
+            android:text="&#8226; Enter the program for as little as $4,000
+\n &#8226; Pay back the course fee from earnings during your curricular practical training
+\n &#8226; Graduate with no student debt"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+<!--        <Button-->
+<!--            android:id="@+id/finances_btn"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignTop="@+id/finances_points"-->
+<!--            android:layout_marginHorizontal="20dp"-->
+<!--            android:layout_marginVertical="100dp"-->
+<!--            android:backgroundTint="@color/finance_apply_btn_color"-->
+<!--            android:gravity="start"-->
+<!--            android:padding="20dp"-->
+<!--            android:text="Apply"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="15sp"-->
+<!--            android:textStyle="bold" />-->
+   </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/first_point"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:background="@color/finance_bg_item"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A Low Initial Payment"
+            android:textColor="#000000"
+            android:textSize="18sp"
+
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="&#8226; Entry for internationals starts at $4,000.
+\n&#8226; No other U.S. university offers this low entry fee.
+\n&#8226; Pay the remaining tuition from your earnings during your curricular practical training."
+            android:textColor="@color/profileEditTextColor"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            tools:ignore="TextContrastCheck" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/second_point"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:background="@color/finance_bg_item"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/first_point">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Student Loans Are Available To You"
+            android:textColor="#000000"
+            android:textSize="18sp"
+
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="&#8226; Pay remaining program costs through a ‘Student Loan’ which you arrange after you receive a paid practicum position.
+\n&#8226; Total cost is ~$55,740, which includes tuition, campus housing, and organic meals."
+            android:textColor="@color/profileEditTextColor"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            tools:ignore="TextContrastCheck" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:background="@color/finance_bg_item"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/second_point">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Repay the Loan during your Paid Practicum"
+            android:textColor="#000000"
+            android:textSize="18sp"
+
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="&#8226; Average starting salary for training practicums: $80,000 – $95,000 per year.
+\n&#8226; Typical repayment amounts will be ~$2000 per month."
+            android:textSize="15sp"
+            android:textStyle="bold"
+            tools:ignore="TextContrastCheck" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

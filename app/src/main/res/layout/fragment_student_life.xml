@@ -7,12 +7,37 @@
     tools:context=".fragments.StudentLifeFragment">
 
 
+    <androidx.cardview.widget.CardView
+        android:layout_margin="20dp"
+        android:id="@+id/videoCard"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:elevation="15dp"
+        app:cardCornerRadius="20dp"
+        app:cardPreventCornerOverlap="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <VideoView
+            android:id="@+id/videoView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+ />
+
+    </androidx.cardview.widget.CardView>
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/studentlife_images"
         android:layout_width="413dp"
         android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/videoCard" />
+
+
     
 </androidx.constraintlayout.widget.ConstraintLayout>
