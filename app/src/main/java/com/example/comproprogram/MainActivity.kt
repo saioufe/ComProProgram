@@ -1,23 +1,22 @@
 package com.example.comproprogram
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
-import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import com.example.comproprogram.fragments.ComproFragment
 import com.example.comproprogram.fragments.FinancesFragment
+import com.example.comproprogram.fragments.PracticumsFragment
 import com.example.comproprogram.fragments.StudentLifeFragment
-
-import java.util.ArrayList
+import com.gitonway.lee.niftymodaldialogeffects.lib.NiftyDialogBuilder
 import java.util.concurrent.atomic.AtomicReference
+
 
 class MainActivity : AppCompatActivity() {
 
-    private var dotscount = 0
-    private lateinit var dots: Array<ImageView?>
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -45,9 +44,10 @@ class MainActivity : AppCompatActivity() {
         val visiableShape = AtomicReference(shape1)
         shape1.visibility = View.VISIBLE
 
-        var comproFragment:ComproFragment = ComproFragment()
-        var studentFragment:StudentLifeFragment = StudentLifeFragment(this)
-        var financesFragment:FinancesFragment = FinancesFragment()
+        var comproFragment = ComproFragment()
+        var studentFragment = StudentLifeFragment(this)
+        var financesFragment = FinancesFragment()
+        var practicumsFragment = PracticumsFragment(this)
 
         supportFragmentManager.beginTransaction()
             .add(R.id.mainContainer, comproFragment).commit()
@@ -84,7 +84,7 @@ class MainActivity : AppCompatActivity() {
             turnOfTheOthers(shapes, shape4)
 
             supportFragmentManager.beginTransaction()
-                .replace(R.id.mainContainer, comproFragment).commit()
+                .replace(R.id.mainContainer, practicumsFragment).commit()
         }
     }
 
