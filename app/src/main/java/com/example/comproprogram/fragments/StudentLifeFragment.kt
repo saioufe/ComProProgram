@@ -6,13 +6,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
 import android.widget.MediaController
 import android.widget.VideoView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.comproprogram.MainActivity
+import com.example.comproprogram.ui.MainActivity
 import com.example.comproprogram.R
 import com.example.comproprogram.adaptors.StudentLifeImagesAdaptor
 

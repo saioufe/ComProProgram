@@ -1,14 +1,8 @@
-package com.example.comproprogram
+package com.example.comproprogram.ui
 
-import ComproPointsAdaptor
 import android.os.Bundle
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.comproprogram.data.ComProPoint
-import com.google.android.material.appbar.CollapsingToolbarLayout
-import java.util.ArrayList
+import com.example.comproprogram.R
 
 
 class PressedTopActivity : AppCompatActivity() {
@@ -22,7 +16,7 @@ class PressedTopActivity : AppCompatActivity() {
         }else if(design == "2") {
             setContentView(R.layout.housing_pressed)
         }else {
-            setContentView(R.layout.housing_pressed)
+            setContentView(R.layout.tm_pressed)
         }
 
 

@@ -1,6 +1,153 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@color/blue"
+            app:expandedTitleMarginEnd="64dp"
+            android:background="@drawable/tm"
+            app:expandedTitleMarginStart="48dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                app:title="Transcendental Meditation"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_scrollFlags="scroll|enterAlways">
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+            <TextView
+                android:text="Absolutely effortless"
+                android:layout_marginVertical="10dp"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+
+            <TextView
+                android:text=" 1. No trying to “empty the mind”\n 2. No mindfulness (monitoring of thoughts)\n 3. No concentrating \n 4. No control of the mind"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+            <TextView
+                android:text=" How is it different?"
+                android:layout_marginVertical="10dp"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text=" &#8226;Hundreds of published research studies have found the TM technique to boost learning ability and creativity, improve brain functioning, and reduce stress and anxiety."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="The TM technique is not “one size fits all.” It’s taught one-on-one and is carefully personalized for you. Only certified TM teachers can instruct you in the authentic TM technique."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="20dp"
+                app:cardBackgroundColor="@color/blue"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="30sp"
+                android:layout_marginVertical="10dp"
+                android:layout_height="200dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/tm2"/>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:text=" &#8226; All of our students and faculty learn the Transcendental Meditation® (TM®) technique for personal growth."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text=" &#8226; TM is a simple, natural technique practiced 20 minutes twice each day while sitting comfortably with the eyes closed."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="20dp"
+                app:cardBackgroundColor="@color/blue"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="30sp"
+                android:layout_marginVertical="10dp"
+                android:layout_height="200dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/tm3"/>
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:text=" &#8226;  Over six million people have learned it — people of all ages, cultures, religions, and walks of life."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+
+
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="20dp"
+                app:cardBackgroundColor="@color/blue"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="30sp"
+                android:layout_marginVertical="10dp"
+                android:layout_height="200dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/tm4"/>
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

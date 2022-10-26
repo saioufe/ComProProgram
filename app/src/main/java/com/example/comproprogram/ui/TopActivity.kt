@@ -1,4 +1,4 @@
-package com.example.comproprogram
+package com.example.comproprogram.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -13,6 +13,7 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.comproprogram.adapters.TopPageAdapter
 import androidx.core.content.ContextCompat
 import androidx.viewpager2.widget.ViewPager2.OnPageChangeCallback
+import com.example.comproprogram.R
 import com.example.comproprogram.data.TopMainSlide
 import java.util.ArrayList
 

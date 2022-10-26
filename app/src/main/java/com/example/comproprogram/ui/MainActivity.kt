@@ -1,4 +1,4 @@
-package com.example.comproprogram
+package com.example.comproprogram.ui
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,11 +6,11 @@ import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import com.example.comproprogram.R
 import com.example.comproprogram.fragments.ComproFragment
 import com.example.comproprogram.fragments.FinancesFragment
 import com.example.comproprogram.fragments.PracticumsFragment
 import com.example.comproprogram.fragments.StudentLifeFragment
-import com.gitonway.lee.niftymodaldialogeffects.lib.NiftyDialogBuilder
 import java.util.concurrent.atomic.AtomicReference
 
 
