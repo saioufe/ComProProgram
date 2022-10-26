@@ -39,7 +39,7 @@
 
 
     <TextView
-        android:id="@+id/second_page_titles"
+        android:id="@+id/top_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="171dp"
@@ -59,7 +59,7 @@
         android:shadowRadius="2"/>
 
     <TextView
-        android:id="@+id/second_page_subTitles"
+        android:id="@+id/top_desc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="bottom"
@@ -69,7 +69,7 @@
         android:textColor="@color/white"
         android:textSize="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/second_page_titles"
+        app:layout_constraintTop_toBottomOf="@+id/top_title"
         android:shadowColor="@color/trans_black"
         android:shadowDx="1"
         android:shadowDy="1"
@@ -90,7 +90,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginHorizontal="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/second_page_subTitles">
+        app:layout_constraintTop_toBottomOf="@+id/top_desc">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="70dp"
@@ -108,6 +108,7 @@
                 >
 
                 <ImageView
+                    android:id="@+id/top_first_image"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_gravity="center"
@@ -126,6 +127,7 @@
                 app:cardCornerRadius="20dp">
 
                 <ImageView
+                    android:id="@+id/top_second_image"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_gravity="center"
@@ -144,6 +146,7 @@
                 app:cardCornerRadius="20dp">
 
                 <ImageView
+                    android:id="@+id/top_third_image"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_gravity="center"
@@ -162,15 +165,14 @@
                 android:background="@color/trans_black"
                 app:cardCornerRadius="20dp">
 
-                <TextView
+                <ImageView
+                    android:id="@+id/top_fourth_image"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_gravity="center"
-                    android:text="25+"
-                    android:textStyle="bold"
-                    android:textColor="@color/title_color"
-                    android:textSize="20dp"
-                    android:gravity="center"
+                    android:src="@drawable/app_image3"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
                     />
             </androidx.cardview.widget.CardView>
         </LinearLayout>
@@ -183,6 +185,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="25dp"
         android:layout_marginHorizontal="20dp"
+        android:onClick="readMore"
         app:layout_constraintBottom_toBottomOf="@+id/back_slider"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttom_buttons">
@@ -196,7 +199,7 @@
             android:textColor="@color/white"
             android:textSize="18dp"
             android:textStyle="bold"
-            android:text="Let's go"
+            android:text="Read More!"
             android:shadowColor="@color/trans_black"
             android:shadowDx="1"
             android:shadowDy="1"

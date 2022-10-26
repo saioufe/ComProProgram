@@ -1,7 +1,6 @@
 package com.example.comproprogram.fragments
 
 import ComproPointsAdaptor
-import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -14,7 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.example.comproprogram.R
-import com.example.comproprogram.adapters.PressedPageAdapter
+import com.example.comproprogram.adapters.TopPageAdapter
 import com.example.comproprogram.adapters.SliderPageAdapter
 import com.example.comproprogram.data.ComProPoint
 import com.example.comproprogram.data.Slider
@@ -28,7 +27,7 @@ class ComproFragment : Fragment() {
     private lateinit var dots: Array<ImageView?>
     val points: MutableList<ComProPoint> = ArrayList()
     val sliders: MutableList<Slider> = ArrayList()
-    val imagesSliders: MutableList<Int> = ArrayList()
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -55,9 +54,7 @@ class ComproFragment : Fragment() {
             )
         )
 
-        imagesSliders.add(R.drawable.acre)
-        imagesSliders.add(R.drawable.tm)
-        imagesSliders.add(R.drawable.international)
+
     }
 
     override fun onCreateView(
@@ -85,7 +82,7 @@ class ComproFragment : Fragment() {
 
 
         val sliderPageAdapter: SliderPageAdapter
-        var pressedPageAdapter: PressedPageAdapter
+        var topPageAdapter: TopPageAdapter
 
 
         // Initializing the ViewPager Object
