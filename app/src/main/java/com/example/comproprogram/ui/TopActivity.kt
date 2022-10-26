@@ -41,6 +41,14 @@ class TopActivity : AppCompatActivity() {
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
             )
         }
+
+
+
+
+
+
+
+
         sliderPressedDotspanel = findViewById<View>(R.id.SliderDotsSecond) as LinearLayout
 
         title = findViewById<View>(R.id.top_title) as TextView
@@ -119,6 +127,11 @@ class TopActivity : AppCompatActivity() {
             params.setMargins(4, 5, 4, 5)
             sliderPressedDotspanel!!.addView(dots[i], params)
         }
+
+
+
+
+
         dots[0]!!.setImageDrawable(
             ContextCompat.getDrawable(
                 applicationContext,
