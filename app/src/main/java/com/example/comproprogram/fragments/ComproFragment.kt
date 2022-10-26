@@ -33,26 +33,30 @@ class ComproFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+
+        if(sliders.size == 0){
+            sliders.add(Slider(R.drawable.acre, "Beautiful 391 Acre Campus", "Fairfield, Iowa"))
+            sliders.add(
+                Slider(
+                    R.drawable.tm,
+                    "Develop Your Inner Genius",
+                    "Our Secret Competitive Edge"
+                )
+            )
+            sliders.add(
+                Slider(
+                    R.drawable.international,
+                    "Over 4,000 Students",
+                    "From 100 Countries"
+                )
+            )
+        }
         points.add(ComProPoint("Study on Campus" , R.drawable.comrpo1, "Begin with 8-13 months of study on our U.S. campus. Learn leading edge technologies.  Study with expert faculty, top academics, and proven personal growth courses." ))
         points.add(ComProPoint("Full-Time Paid Practicum" , R.drawable.compo2, "Internationals work for up to two years with a full-time paid practicum as a software developer in any company in the USA.  Average starting rate: \$80,000 – \$95,000 per year." ))
         points.add(ComProPoint("Further Education" , R.drawable.compo3, "Finish your remaining courses via distance education during evenings and weekends while working at your practicum position. 98% full-time paid practicum placement success." ))
         points.add(ComProPoint("Graduate with a Master’s Degree" , R.drawable.compo4, "Graduate and receive a Master’s Degree in Computer Science from your career-focused Master’s degree program. Congratulations!" ))
 
-        sliders.add(Slider(R.drawable.acre, "Beautiful 391 Acre Campus", "Fairfield, Iowa"))
-        sliders.add(
-            Slider(
-                R.drawable.tm,
-                "Develop Your Inner Genius",
-                "Our Secret Competitive Edge"
-            )
-        )
-        sliders.add(
-            Slider(
-                R.drawable.international,
-                "Over 4,000 Students",
-                "From 100 Countries"
-            )
-        )
+
 
 
     }
