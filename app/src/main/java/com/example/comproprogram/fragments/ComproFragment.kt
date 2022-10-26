@@ -72,7 +72,7 @@ class ComproFragment : Fragment() {
         val pointRecycler = v.findViewById<View>(R.id.compro_point_recycler) as RecyclerView
 
 
-        val mViewPager: ViewPager2
+
 
         // Create adapter passing in the sample user data
         val adapter = ComproPointsAdaptor(points)
@@ -86,17 +86,20 @@ class ComproFragment : Fragment() {
 
 
         val sliderPageAdapter: SliderPageAdapter
-        var topPageAdapter: TopPageAdapter
 
 
+
+        val mViewPager: ViewPager2
         // Initializing the ViewPager Object
         mViewPager = v.findViewById<View>(R.id.pager_slider) as ViewPager2
-
-
-        // Initializing the ViewPagerAdapter
+        // Initializing the SliderPageAdapter
         sliderPageAdapter = SliderPageAdapter(container!!.context, sliders)
-
+        //assign the adaptor to the viewPager2
         mViewPager.adapter = sliderPageAdapter
+
+
+
+        //Dots
         dots = arrayOfNulls(3)
 
         for (i in 0 until 3) {

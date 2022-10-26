@@ -28,11 +28,14 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        val shapes: MutableList<View> = ArrayList()
+
         val button1 = findViewById<Button>(R.id.first_button)
         val button2 = findViewById<Button>(R.id.second_button)
         val button3 = findViewById<Button>(R.id.third_button)
         val button4 = findViewById<Button>(R.id.fourth_button)
+
+
+        val shapes: MutableList<View> = ArrayList()
         val shape1 = findViewById<View>(R.id.first_shape)
         shapes.add(shape1)
         val shape2 = findViewById<View>(R.id.second_shape)
