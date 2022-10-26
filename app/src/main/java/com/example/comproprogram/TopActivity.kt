@@ -1,5 +1,6 @@
 package com.example.comproprogram
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -68,7 +69,12 @@ class TopActivity : AppCompatActivity() {
                 "University Housing",
                 "Great residential experience for students while cultivating academic achievement and personal growth",
                 R.drawable.housing1,
-                listOf(R.drawable.housing2, R.drawable.housing3, R.drawable.housing1, R.drawable.housing4)
+                listOf(
+                    R.drawable.housing2,
+                    R.drawable.housing3,
+                    R.drawable.housing1,
+                    R.drawable.housing4
+                )
             )
         )
         topMainSliders.add(
@@ -150,6 +156,14 @@ class TopActivity : AppCompatActivity() {
     }
 
     fun readMore(view: View) {
+        var int: Intent = Intent(this, PressedTopActivity::class.java)
+        var selectedDesign = when (selectedTop.title) {
+            "MIU dining hall" -> "1"
+            "University Housing" -> "2"
+            else -> "3"
 
+        }
+        int.putExtra("design", selectedDesign)
+        startActivity(int)
     }
 }

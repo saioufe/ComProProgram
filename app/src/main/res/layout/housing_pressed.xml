@@ -1,0 +1,169 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@color/blue"
+            app:expandedTitleMarginEnd="64dp"
+            android:background="@drawable/housing1"
+            app:expandedTitleMarginStart="48dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                app:title="University Housing"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_scrollFlags="scroll|enterAlways">
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:text="Great residential experience for students while cultivating academic achievement and personal growth"
+                android:layout_marginVertical="10dp"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="On-Campus Housing"
+                android:layout_marginVertical="10dp"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text=" &#8226; Every student residence is designed to provide a comfortable environment for study and rest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text=" &#8226; Individual rooms have Internet connections as well as air conditioning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text=" &#8226; Individual rooms have Internet connections as well as air conditioning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="20dp"
+                app:cardBackgroundColor="@color/blue"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="30sp"
+                android:layout_marginVertical="10dp"
+                android:layout_height="200dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/housing2"/>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:text=" &#8226; From 9:30 p.m. to 9:30 a.m. every day, students are expected to respect their fellow residents by honoring quiet times"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text=" &#8226; At all times, students are expected to be respectful of others who may be studying or meditating, especially during afternoon and evening hours."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text=" &#8226; To ensure that students may comfortably maintain a good daily routine, visitors are asked to leave the residence halls by 9:30 p.m. in the evening."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="20dp"
+                app:cardBackgroundColor="@color/blue"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="30sp"
+                android:layout_marginVertical="10dp"
+                android:layout_height="200dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/housing3"/>
+            </androidx.cardview.widget.CardView>
+
+
+
+            <TextView
+                android:text=" &#8226; Guests should not enter the buildings before 9:30 a.m. "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text=" &#8226; Vastu Housing: Aside from our traditional residence halls, students also have the opportunity to live in Maharishi Sthāpatya Veda housing designed in accordance with Natural Law."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text=" &#8226; These rooms cost an additional $900 per semester beyond the regular room charges, and at times there is a waiting list."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="20dp"
+                app:cardBackgroundColor="@color/blue"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="30sp"
+                android:layout_marginVertical="10dp"
+                android:layout_height="200dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/housing4"/>
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:text=" &#8226; Single Rooms: We usually provide single rooms. At times, however, it may be necessary for the Housing Office to make adjustments in room occupancy to accommodate changing University needs."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text=" &#8226; Student Property Insurance: Please note that the personal property of students is not the responsibility of the University. We suggest that students obtain property insurance if they do not already have property insurance."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
