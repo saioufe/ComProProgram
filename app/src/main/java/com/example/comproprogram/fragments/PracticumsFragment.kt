@@ -41,9 +41,7 @@ class PracticumsFragment(con:Context) : Fragment() {
         chart!!.setDrawBarShadow(false)
         chart!!.setDrawValueAboveBar(true)
         chart!!.description.isEnabled = false
-        // if more than 60 entries are displayed in the chart, no values will be
-        // drawn
-        chart!!.setMaxVisibleValueCount(60)
+
         // scaling can now only be done on x- and y-axis separately
         chart!!.setPinchZoom(false)
         chart!!.setDrawGridBackground(false)
@@ -64,7 +62,7 @@ class PracticumsFragment(con:Context) : Fragment() {
     }
 
     private fun setData() {
-        val start = 1f
+
         val values: ArrayList<BarEntry> = ArrayList()
 
 
