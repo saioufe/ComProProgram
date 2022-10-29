@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="false"
     tools:context=".ui.TopActivity">
-
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/back_slider"
         android:layout_width="match_parent"
