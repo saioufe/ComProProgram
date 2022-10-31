@@ -4,9 +4,12 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.databinding.DataBindingUtil
 import com.example.comproprogram.R
+import com.example.comproprogram.databinding.ActivityMainBinding
 import com.example.comproprogram.fragments.ComproFragment
 import com.example.comproprogram.fragments.FinancesFragment
 import com.example.comproprogram.fragments.PracticumsFragment
@@ -18,31 +21,34 @@ class MainActivity : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        lateinit var homeBinding: ActivityMainBinding
 
-        val toolbar = findViewById<Toolbar>(R.id.main_toolbar)
+        super.onCreate(savedInstanceState)
+        //setContentView(R.layout.activity_main)
+        homeBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+
+
+        val toolbar = homeBinding.mainToolbar //findViewById<Toolbar>(R.id.main_toolbar)
+
         toolbar.title = ""
         toolbar.setBackgroundColor(resources.getColor(R.color.white, resources.newTheme()))
         setSupportActionBar(toolbar)
 
 
-
-
-        val button1 = findViewById<Button>(R.id.first_button)
-        val button2 = findViewById<Button>(R.id.second_button)
-        val button3 = findViewById<Button>(R.id.third_button)
-        val button4 = findViewById<Button>(R.id.fourth_button)
+        val button1 = homeBinding.firstButton // findViewById<Button>(R.id.first_button)
+        val button2 = homeBinding.secondButton // findViewById<Button>(R.id.second_button)
+        val button3 = homeBinding.thirdButton // findViewById<Button>(R.id.third_button)
+        val button4 = homeBinding.fourthButton// findViewById<Button>(R.id.fourth_button)
 
 
         val shapes: MutableList<View> = ArrayList()
-        val shape1 = findViewById<View>(R.id.first_shape)
+        val shape1 = homeBinding.firstShape// findViewById<View>(R.id.first_shape)
         shapes.add(shape1)
-        val shape2 = findViewById<View>(R.id.second_shape)
+        val shape2 = homeBinding.secondShape // findViewById<View>(R.id.second_shape)
         shapes.add(shape2)
-        val shape3 = findViewById<View>(R.id.third_shape)
+        val shape3 = homeBinding.thirdShape // findViewById<View>(R.id.third_shape)
         shapes.add(shape3)
-        val shape4 = findViewById<View>(R.id.fourth_shape)
+        val shape4 = homeBinding.fourthShape // findViewById<View>(R.id.fourth_shape)
         shapes.add(shape4)
         val visiableShape = AtomicReference(shape1)
         shape1.visibility = View.VISIBLE
@@ -58,7 +64,7 @@ class MainActivity : AppCompatActivity() {
 
         button1.setOnClickListener { view: View ->
             shape1.visibility = View.VISIBLE
-            visiableShape.set(view)
+            visiableShape.set(homeBinding.firstShape)
             turnOfTheOthers(shapes, shape1)
 
             supportFragmentManager.beginTransaction()
@@ -66,7 +72,7 @@ class MainActivity : AppCompatActivity() {
         }
         button2.setOnClickListener { view: View ->
             shape2.visibility = View.VISIBLE
-            visiableShape.set(view)
+            visiableShape.set(homeBinding.secondShape)
             turnOfTheOthers(shapes, shape2)
 
 
@@ -75,7 +81,7 @@ class MainActivity : AppCompatActivity() {
         }
         button3.setOnClickListener { view: View ->
             shape3.visibility = View.VISIBLE
-            visiableShape.set(view)
+            visiableShape.set(homeBinding.thirdShape)
             turnOfTheOthers(shapes, shape3)
 
             supportFragmentManager.beginTransaction()
@@ -83,7 +89,7 @@ class MainActivity : AppCompatActivity() {
         }
         button4.setOnClickListener { view: View ->
             shape4.visibility = View.VISIBLE
-            visiableShape.set(view)
+            visiableShape.set(homeBinding.fourthShape)
             turnOfTheOthers(shapes, shape4)
 
             supportFragmentManager.beginTransaction()
@@ -100,7 +106,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun topButtonPressed(view: View) {
-        var intent = Intent(this , TopActivity::class.java)
+        var intent = Intent(this, TopActivity::class.java)
         startActivity(intent)
     }
 
