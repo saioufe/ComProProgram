@@ -74,8 +74,6 @@ class MainActivity : AppCompatActivity() {
             shape2.visibility = View.VISIBLE
             visiableShape.set(homeBinding.secondShape)
             turnOfTheOthers(shapes, shape2)
-
-
             supportFragmentManager.beginTransaction()
                 .replace(R.id.mainContainer, studentFragment).commit()
         }
