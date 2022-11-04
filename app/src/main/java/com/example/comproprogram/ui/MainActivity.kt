@@ -77,6 +77,7 @@ class MainActivity : AppCompatActivity() {
             supportFragmentManager.beginTransaction()
                 .replace(R.id.mainContainer, studentFragment).commit()
         }
+
         button3.setOnClickListener { view: View ->
             shape3.visibility = View.VISIBLE
             visiableShape.set(homeBinding.thirdShape)
