@@ -52,12 +52,10 @@ class MainActivity : AppCompatActivity() {
         shapes.add(shape4)
         val visiableShape = AtomicReference(shape1)
         shape1.visibility = View.VISIBLE
-
         var comproFragment = ComproFragment()
         var studentFragment = StudentLifeFragment(this)
         var financesFragment = FinancesFragment()
         var practicumsFragment = PracticumsFragment(this)
-
         supportFragmentManager.beginTransaction()
             .add(R.id.mainContainer, comproFragment).commit()
 
