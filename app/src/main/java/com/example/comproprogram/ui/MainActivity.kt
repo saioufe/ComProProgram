@@ -58,8 +58,6 @@ class MainActivity : AppCompatActivity() {
         var practicumsFragment = PracticumsFragment(this)
         supportFragmentManager.beginTransaction()
             .add(R.id.mainContainer, comproFragment).commit()
-
-
         button1.setOnClickListener { view: View ->
             shape1.visibility = View.VISIBLE
             visiableShape.set(homeBinding.firstShape)
