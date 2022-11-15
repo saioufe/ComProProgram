@@ -62,10 +62,10 @@ class MainActivity : AppCompatActivity() {
             shape1.visibility = View.VISIBLE
             visiableShape.set(homeBinding.firstShape)
             turnOfTheOthers(shapes, shape1)
-
             supportFragmentManager.beginTransaction()
                 .replace(R.id.mainContainer, comproFragment).commit()
         }
+
         button2.setOnClickListener { view: View ->
             shape2.visibility = View.VISIBLE
             visiableShape.set(homeBinding.secondShape)
